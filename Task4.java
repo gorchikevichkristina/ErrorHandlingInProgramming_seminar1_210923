@@ -5,12 +5,18 @@ public class Task4 {
 1. Если в какой-то ячейке встретился null, то необходимо “оповестить” об этом пользователя
 2. Если null’ы встретились в нескольких ячейках, то идеально было бы все их “подсветить”
      */
-    public static void checkArray(Integer[] arr){
+    public static void main(String[] args) {
+        checkArray(new Integer[]{15, 466, null, null, 47});
+    }
+
+    public static void checkArray(Integer[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i]==null){
+            if (arr[i] == null) {
+                throw new NullPointerException(String.format("В ячейке с индексом %s содержится null", i));
 
             }
 
         }
+        System.out.println("Значение null не обнаружено");
     }
 }
