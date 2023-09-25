@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -20,6 +21,8 @@ public class Task5 {
             arr[index] = 1;
         } catch (IndexOutOfBoundsException e) {
             System.err.println("Указан индекс за пределами массива");
+        }catch (InputMismatchException e) {
+            System.err.println("Не число");
         }
     }
 }
